@@ -62,7 +62,7 @@ int main(){
                 argv[2] = NULL;
             }
             
-            if(execvp("/home/ubuntu/workspace/Assignment9 - Matrix/runner.out", argv) == -1){
+            if(execvp("/home/ubuntu/workspace/OS2018/Assignment 9 - Searching a matrix with several processes/runner.out", argv) == -1){
                 perror("execvp error\n");
                 exit(EXIT_FAILURE);
             }
