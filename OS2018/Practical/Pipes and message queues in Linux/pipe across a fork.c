@@ -27,10 +27,10 @@ int main(){
             char *some_data = "So hello from the other side...";
             data_processed = write(pipe_fd[1], some_data, strlen(some_data));
             printf("Wrote %d bytes\n", data_processed);
-            wait(NULL);
             if(close(pipe_fd[1]) == -1) exit(EXIT_FAILURE);
             exit(EXIT_SUCCESS);
         }
     }
+    perror("Error: ");
     exit(EXIT_FAILURE);
 }
